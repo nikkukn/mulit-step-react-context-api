@@ -68,7 +68,7 @@ function StepZero() {
               name="country"
             >
               {data.map((item) => (
-                <option>{item.CountryName}</option>
+                <option value={item.CountryName}>{item.CountryName}</option>
               ))}
             </select>
           </div>
