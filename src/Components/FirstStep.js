@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, UserDispatchContext } from "react";
 import { Button, TextField } from "@material-ui/core";
 import { multiStepContext } from "../StepContext";
 import "../App.css";
@@ -7,15 +7,21 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function FirstStep() {
+  const { setStep, userData, setUserData, childselect, setChildselect } =
+    useContext(multiStepContext);
+
+  const [startDate, setStartDate] = useState(new Date());
+
   const [checkvalue, setCheckvalue] = useState("");
+  const childselected = (e) => {
+    setChildselect(e.target.value);
+    setUserData({ ...userData, childselect: e.target.value });
+  };
 
   const onbox = (e) => {
     setCheckvalue(e.target.value);
     setUserData({ ...userData, checkvalue: e.target.value });
   };
-
-  const { setStep, userData, setUserData } = useContext(multiStepContext);
-  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <div className="container">
@@ -108,7 +114,7 @@ function FirstStep() {
             selected={startDate}
             onChange={
               ((e) => setUserData({ ...userData, DateFrom: e.target.value }),
-                (date) => setStartDate(date))
+              (date) => setStartDate(date))
             }
           />
 
@@ -222,8 +228,21 @@ function FirstStep() {
       </div>
       {checkvalue === "dango" ? (
         <>
-          <labe>A box</labe>
-          <input tyle="text" />
+          <label>Select number of childrens</label>
+          <select
+            value={userData["childselect"]}
+            onChange={childselected}
+            className="w-100 input-field mb-3"
+            name="childselect"
+            id="childselect"
+          >
+            <option value="" selected>
+              0
+            </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </>
       ) : (
         "worng"

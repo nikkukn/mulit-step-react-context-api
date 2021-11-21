@@ -12,6 +12,7 @@ import { Button, TextField } from "@material-ui/core";
 
 export default function DisplayData() {
   const { finalData } = useContext(multiStepContext);
+  console.log(finalData);
   return (
     <div>
       {finalData.map((data) => (

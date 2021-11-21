@@ -1,28 +1,41 @@
-import React, { useState } from 'react'
-import App from "./App"
+import React, { useState } from "react";
+import App from "./App";
 
 // Creating Context
 export const multiStepContext = React.createContext();
 
 const StepContext = () => {
-    const [currentStep, setStep] = useState(1);
-    const [userData, setUserData] = useState([]);
-    const [finalData, setFinalData] = useState([]);
+  const [currentStep, setStep] = useState(1);
+  const [userData, setUserData] = useState([]);
+  const [finalData, setFinalData] = useState([]);
+  const [childselect, setChildselect] = useState("");
 
-    function submitData() {
-        setFinalData( finalData => [ ...finalData, userData]);
-        setUserData('');
-        setStep(1);
-    }
+  function submitData() {
+    setFinalData((finalData) => [...finalData, userData]);
+    setUserData("");
+    setStep(1);
+  }
 
-    return (
-        <div>
-            {/* Passing values with provider */}
-            <multiStepContext.Provider value={{ currentStep, setStep, userData, setUserData, finalData, setFinalData, submitData}}>
-                <App />
-            </multiStepContext.Provider>
-        </div>
-    )
-}
+  return (
+    <div>
+      {/* Passing values with provider */}
+      <multiStepContext.Provider
+        value={{
+          currentStep,
+          setStep,
+          userData,
+          setUserData,
+          finalData,
+          setFinalData,
+          submitData,
+          childselect,
+          setChildselect,
+        }}
+      >
+        <App />
+      </multiStepContext.Provider>
+    </div>
+  );
+};
 
-export default StepContext
+export default StepContext;
