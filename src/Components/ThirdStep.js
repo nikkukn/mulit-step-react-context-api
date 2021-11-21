@@ -4,7 +4,7 @@ import { multiStepContext } from '../StepContext'
 
 
 function ThirdStep() {
-    const { setStep, userData, setUserData, submitData } = useContext(multiStepContext);
+    const { setStep, userData, setUserData } = useContext(multiStepContext);
     return (
         <div className="container">
             <h2 className="text-blue mb-4">03. Personal Information</h2>
@@ -235,7 +235,7 @@ function ThirdStep() {
             </div>
             <div>
                 <Button variant="contained" color="secondary" onClick={() => setStep(3)} >Back</Button>
-                <Button variant="contained" color="primary" onClick={submitData}>Submit</Button>
+                <Button variant="contained" color="primary" onClick={() => setStep(5)} >Next</Button>
             </div>
         </div>
     )

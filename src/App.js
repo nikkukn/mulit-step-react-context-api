@@ -6,6 +6,7 @@ import { multiStepContext } from "./StepContext";
 import { useContext } from "react";
 import DisplayData from "./Components/DisplayData";
 import StepZero from "./Components/StepZero";
+import LastStep from "./Components/LastStep"
 
 
 function App() {
@@ -26,6 +27,9 @@ function showStep(step){
 
     case 4: 
     return <ThirdStep/>
+
+    case 5:
+      return <LastStep/>
   }
 }
 
@@ -34,6 +38,9 @@ function showStep(step){
       <div className="center-stepper container">
         {/* We have to pass currentStep -1 bcz we want to start from zero */}
         <Stepper style={{ width: '50%' }} activeStep={currentStep - 1} orientation="horizontal">
+          <Step>
+            <StepLabel></StepLabel>
+          </Step>
           <Step>
             <StepLabel></StepLabel>
           </Step>

@@ -62,7 +62,7 @@ function StepZero() {
             <select
               value={userData["Country"]}
               onChange={(e) =>
-                setUserData({ ...userData, Country: e.target.value })
+                setUserData({ ...userData, "Country": e.target.value })
               }
               className="w-100 input-field mb-3"
               name="country"
