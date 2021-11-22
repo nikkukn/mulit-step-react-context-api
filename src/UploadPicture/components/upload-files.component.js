@@ -73,7 +73,7 @@ export default class UploadFiles extends Component {
     const { selectedFiles, currentFile, progress, message, fileInfos } = this.state;
 
     return (
-      <div>
+      <div className="row">
         {currentFile && (
           <div className="progress mb-3">
             <div
@@ -89,9 +89,9 @@ export default class UploadFiles extends Component {
           </div>
         )}
 
-        <Dropzone onDrop={this.onDrop} multiple={false}>
+        <Dropzone   onDrop={this.onDrop} multiple={false}>
           {({ getRootProps, getInputProps }) => (
-            <section>
+            <section className="dropz">
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
                 {selectedFiles && selectedFiles[0].name ? (
@@ -115,7 +115,7 @@ export default class UploadFiles extends Component {
           )}
         </Dropzone>
 
-        <div className="alert alert-light" role="alert">
+        <div className="alert alert-light col-md-12 text-danger" role="alert">
           {message}
         </div>
 

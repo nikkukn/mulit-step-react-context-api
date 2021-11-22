@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="79" viewBox="0 0 76 79">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" x2="0.09" y2="1.076" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffb703"/>
+      <stop offset="1" stop-color="#fb8500"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_301" data-name="Group 301" transform="translate(-1372 -786)">
+    <path id="Path_122" data-name="Path 122" d="M9,0H67a9,9,0,0,1,9,9V70a9,9,0,0,1-9,9H9a9,9,0,0,1-9-9V9A9,9,0,0,1,9,0Z" transform="translate(1372 786)" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-plane-departure" data-name="Icon awesome-plane-departure" d="M53.054,37.619H1.36A1.36,1.36,0,0,0,0,38.98V41.7a1.36,1.36,0,0,0,1.36,1.36H53.054a1.36,1.36,0,0,0,1.36-1.36V38.98A1.36,1.36,0,0,0,53.054,37.619ZM6.849,28.545a2.8,2.8,0,0,0,2.069.911l11.1-.015a5.579,5.579,0,0,0,2.52-.605L47.274,16.281a14.453,14.453,0,0,0,5.7-4.958C54.529,8.9,54.7,7.15,54.084,5.912s-2.1-2.149-4.953-2.334A14.281,14.281,0,0,0,41.8,5.234L33.42,9.485,14.825,2.508a1.513,1.513,0,0,0-1.53-.094L7.7,5.251a1.553,1.553,0,0,0-.44,2.426l13.282,8.341L11.772,20.47l-6.151-3.1a1.514,1.514,0,0,0-1.366,0L.843,19.1a1.554,1.554,0,0,0-.474,2.387Z" transform="translate(1382.792 802.846)" fill="#fff"/>
+  </g>
+</svg>

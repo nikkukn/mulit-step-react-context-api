@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="63" viewBox="0 0 63 63">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.209" y1="-0.438" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0aab8a"/>
+      <stop offset="1" stop-color="#01f79e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_295" data-name="Group 295" transform="translate(-1106 -2880)">
+    <circle id="Ellipse_36" data-name="Ellipse 36" cx="31.5" cy="31.5" r="31.5" transform="translate(1169 2943) rotate(180)" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M19.627,20.25l1-6.515H14.375V9.507c0-1.782.873-3.52,3.673-3.52h2.842V.44A34.658,34.658,0,0,0,15.846,0C10.7,0,7.332,3.12,7.332,8.769v4.965H1.609V20.25H7.332V36h7.043V20.25Z" transform="translate(1126.25 2894.125)" fill="#fafafa"/>
+  </g>
+</svg>

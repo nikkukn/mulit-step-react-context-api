@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="63" viewBox="0 0 63 63">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.209" y1="-0.438" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0aab8a"/>
+      <stop offset="1" stop-color="#01f79e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_298" data-name="Group 298" transform="translate(-1322 -2880)">
+    <circle id="Ellipse_39" data-name="Ellipse 39" cx="31.5" cy="31.5" r="31.5" transform="translate(1385 2943) rotate(180)" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-google-plus-g" data-name="Icon awesome-google-plus-g" d="M27.145,16.066a11.451,11.451,0,0,1,.221,2.247C27.366,26.03,22.191,31.5,14.4,31.5a13.5,13.5,0,0,1,0-27,12.9,12.9,0,0,1,9.043,3.536l-3.665,3.518A7.58,7.58,0,0,0,14.4,9.473a8.529,8.529,0,0,0,0,17.055c5.341,0,7.349-3.849,7.662-5.82H14.4V16.066H27.145Zm13.036.453V12.6H36.244v3.919H32.325v3.938h3.919v3.919h3.938V20.456H44.1V16.519H40.181Z" transform="translate(1331 2894.125)" fill="#fafafa"/>
+  </g>
+</svg>

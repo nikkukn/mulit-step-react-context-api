@@ -67,6 +67,7 @@ function StepZero() {
               className="w-100 input-field mb-3"
               name="country"
             >
+              <option value="">--select--</option>
               {data.map((item) => (
                 <option value={item.CountryName}>{item.CountryName}</option>
               ))}
