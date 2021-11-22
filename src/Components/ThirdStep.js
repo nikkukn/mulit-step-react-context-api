@@ -162,131 +162,18 @@ function ThirdStep() {
 
       {childselect == 3 ? (
         <>
-          {/* Third Child */}
-
-          <div className="row  mb-4">
-            <div className="col-md-6 travel-form">
-              <h6>3rd Child Name</h6>
-              <input
-                value={userData["tChildName"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, tChildName: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 3rd child's name"
-              />
-
-              <h6>3rd Child DOB</h6>
-              <input
-                value={userData["tChildDob"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, tChildDob: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 3rd child's date of birth"
-              />
-            </div>
-
-            <div className="col-md-6 travel-form">
-              <h6>3rd Child Passport No </h6>
-              <input
-                value={userData["tChildPno"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, tChildPno: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter third child Passport no"
-              />
-            </div>
-          </div>
+          <Firstchild userData={userData} setUserData={setUserData} />
+          <Secondchild userData={userData} setUserData={setUserData} />
+          <Thirdchild userData={userData} setUserData={setUserData} />
         </>
       ) : childselect == 2 ? (
         <>
-          {/* Second Child */}
-          <div className="row">
-            <div className="col-md-6 travel-form">
-              <h6>2nd Child Name</h6>
-              <input
-                value={userData["sChildName"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, fChildName: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 2nd child's name"
-              />
-
-              <h6>2nd Child DOB</h6>
-              <input
-                value={userData["sChildDob"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, sChildDob: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 3rd child's date of birth"
-              />
-            </div>
-
-            <div className="col-md-6 travel-form">
-              <h6>2nd Child Passport No </h6>
-              <input
-                value={userData["sChildPno"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, sChildPno: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 2nd child's Passport no"
-              />
-            </div>
-          </div>
+          <Firstchild userData={userData} setUserData={setUserData} />
+          <Secondchild userData={userData} setUserData={setUserData} />
         </>
       ) : childselect == 1 ? (
         <>
-          <h3 className="text-blue mb-4">Children Information</h3>
-          <div className="row">
-            {/* First Child */}
-            <div className="col-md-6 travel-form">
-              <h6>1st Child Name</h6>
-              <input
-                value={userData["fChildName"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, fChildName: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter first child name"
-              />
-
-              <h6>1st Child DOB</h6>
-              <input
-                value={userData["fChildDob"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, fChildDob: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 1st child's date of birth"
-              />
-            </div>
-
-            <div className="col-md-6 travel-form">
-              <h6>1st Child Passport No </h6>
-              <input
-                value={userData["fChildPno"]}
-                onChange={(e) =>
-                  setUserData({ ...userData, fChildName: e.target.value })
-                }
-                name="date"
-                className="w-100 input-field mb-3"
-                placeholder="Enter 3rd child Passport no"
-              />
-            </div>
-          </div>
+          <Firstchild userData={userData} setUserData={setUserData} />
         </>
       ) : null}
 
@@ -307,3 +194,143 @@ function ThirdStep() {
 }
 
 export default ThirdStep;
+
+function Firstchild({ userData, setUserData }) {
+  return (
+    <>
+      <h3 className="text-blue mb-4">Children Information</h3>
+      <div className="row">
+        {/* First Child */}
+        <div className="col-md-6 travel-form">
+          <h6>1st Child Name</h6>
+          <input
+            value={userData["fChildName"]}
+            onChange={(e) =>
+              setUserData({ ...userData, fChildName: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter first child name"
+          />
+
+          <h6>1st Child DOB</h6>
+          <input
+            value={userData["fChildDob"]}
+            onChange={(e) =>
+              setUserData({ ...userData, fChildDob: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 1st child's date of birth"
+          />
+        </div>
+
+        <div className="col-md-6 travel-form">
+          <h6>1st Child Passport No </h6>
+          <input
+            value={userData["fChildPno"]}
+            onChange={(e) =>
+              setUserData({ ...userData, fChildName: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 3rd child Passport no"
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Secondchild({ userData, setUserData }) {
+  return (
+    <>
+      {/* Second Child */}
+      <div className="row">
+        <div className="col-md-6 travel-form">
+          <h6>2nd Child Name</h6>
+          <input
+            value={userData["sChildName"]}
+            onChange={(e) =>
+              setUserData({ ...userData, fChildName: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 2nd child's name"
+          />
+
+          <h6>2nd Child DOB</h6>
+          <input
+            value={userData["sChildDob"]}
+            onChange={(e) =>
+              setUserData({ ...userData, sChildDob: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 3rd child's date of birth"
+          />
+        </div>
+
+        <div className="col-md-6 travel-form">
+          <h6>2nd Child Passport No </h6>
+          <input
+            value={userData["sChildPno"]}
+            onChange={(e) =>
+              setUserData({ ...userData, sChildPno: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 2nd child's Passport no"
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Thirdchild({ userData, setUserData }) {
+  return (
+    <>
+      {/* Third Child */}
+
+      <div className="row  mb-4">
+        <div className="col-md-6 travel-form">
+          <h6>3rd Child Name</h6>
+          <input
+            value={userData["tChildName"]}
+            onChange={(e) =>
+              setUserData({ ...userData, tChildName: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 3rd child's name"
+          />
+
+          <h6>3rd Child DOB</h6>
+          <input
+            value={userData["tChildDob"]}
+            onChange={(e) =>
+              setUserData({ ...userData, tChildDob: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter 3rd child's date of birth"
+          />
+        </div>
+
+        <div className="col-md-6 travel-form">
+          <h6>3rd Child Passport No </h6>
+          <input
+            value={userData["tChildPno"]}
+            onChange={(e) =>
+              setUserData({ ...userData, tChildPno: e.target.value })
+            }
+            name="date"
+            className="w-100 input-field mb-3"
+            placeholder="Enter third child Passport no"
+          />
+        </div>
+      </div>
+    </>
+  );
+}
