@@ -3,27 +3,19 @@ import { Button, Textinput } from "@material-ui/core";
 import { multiStepContext } from "../StepContext";
 
 function ThirdStep() {
-  const { setStep, userData, setUserData, childselect } =
-    useContext(multiStepContext);
+  const {
+    setStep,
+    userData,
+    setUserData,
+    childselect,
+    checkvalues,
+    setCheckvalues,
+  } = useContext(multiStepContext);
   const { finalData } = useContext(multiStepContext);
   console.log(finalData);
   console.log(childselect);
   return (
     <div className="container">
-      {childselect == 3 ? (
-        <>
-          <h1>ok looking good 3rd</h1>
-          <h1>ok looking good 3rd</h1>
-          <h1>ok looking good 3rd</h1>
-        </>
-      ) : childselect == 2 ? (
-        <>
-          <h1>ok looking good 2nd</h1>
-          <h1>ok looking good 2nd</h1>
-        </>
-      ) : childselect == 1 ? (
-        <h1>ok looking good 1st</h1>
-      ) : null}
       <h2 className="text-blue mb-4">03. Personal Information</h2>
       <div className="row">
         <div className="col-md-6 travel-form">
@@ -107,75 +99,78 @@ function ThirdStep() {
       </div>
 
       <br />
-      <h3 className="text-blue mb-4">Family Information</h3>
-      <div className="row">
-        <div className="col-md-6 travel-form">
-          <h6>Spouse's Name</h6>
-          <input
-            value={userData["spouseName"]}
-            onChange={(e) =>
-              setUserData({ ...userData, spouseName: e.target.value })
-            }
-            name="date"
-            className="w-100 input-field mb-3"
-            placeholder="Enter spouse's name"
-          />
-
-          <h6>Spouse's DOB</h6>
-          <input
-            value={userData["spouseDob"]}
-            onChange={(e) =>
-              setUserData({ ...userData, spouseDob: e.target.value })
-            }
-            name="date"
-            className="w-100 input-field mb-3"
-            placeholder="Enter spouse's date of birth"
-          />
-        </div>
-
-        <div className="col-md-6 travel-form">
-          <h6>Spouse's Passport No</h6>
-          <input
-            value={userData["spousePno"]}
-            onChange={(e) =>
-              setUserData({ ...userData, spousePno: e.target.value })
-            }
-            name="date"
-            className="w-100 input-field mb-3"
-            placeholder="Enter spouse's passport no"
-          />
-
-          <h6>Spouse's CNIC</h6>
-          <input
-            value={userData["spouseCNIC"]}
-            onChange={(e) =>
-              setUserData({ ...userData, spouseCNIC: e.target.value })
-            }
-            name="date"
-            className="w-100 input-field mb-3"
-            placeholder="Enter spouse's CNIC"
-          />
-        </div>
-      </div>
-
-      <br />
-
-      {childselect == 3 ? (
+      {checkvalues === "dango" ? (
         <>
-          <Firstchild userData={userData} setUserData={setUserData} />
-          <Secondchild userData={userData} setUserData={setUserData} />
-          <Thirdchild userData={userData} setUserData={setUserData} />
-        </>
-      ) : childselect == 2 ? (
-        <>
-          <Firstchild userData={userData} setUserData={setUserData} />
-          <Secondchild userData={userData} setUserData={setUserData} />
-        </>
-      ) : childselect == 1 ? (
-        <>
-          <Firstchild userData={userData} setUserData={setUserData} />
+          <h3 className="text-blue mb-4">Family Information</h3>
+          <div className="row">
+            <div className="col-md-6 travel-form">
+              <h6>Spouse's Name</h6>
+              <input
+                value={userData["spouseName"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, spouseName: e.target.value })
+                }
+                name="date"
+                className="w-100 input-field mb-3"
+                placeholder="Enter spouse's name"
+              />
+
+              <h6>Spouse's DOB</h6>
+              <input
+                value={userData["spouseDob"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, spouseDob: e.target.value })
+                }
+                name="date"
+                className="w-100 input-field mb-3"
+                placeholder="Enter spouse's date of birth"
+              />
+            </div>
+
+            <div className="col-md-6 travel-form">
+              <h6>Spouse's Passport No</h6>
+              <input
+                value={userData["spousePno"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, spousePno: e.target.value })
+                }
+                name="date"
+                className="w-100 input-field mb-3"
+                placeholder="Enter spouse's passport no"
+              />
+
+              <h6>Spouse's CNIC</h6>
+              <input
+                value={userData["spouseCNIC"]}
+                onChange={(e) =>
+                  setUserData({ ...userData, spouseCNIC: e.target.value })
+                }
+                name="date"
+                className="w-100 input-field mb-3"
+                placeholder="Enter spouse's CNIC"
+              />
+            </div>
+          </div>
+          {childselect == 3 ? (
+            <>
+              <Firstchild userData={userData} setUserData={setUserData} />
+              <Secondchild userData={userData} setUserData={setUserData} />
+              <Thirdchild userData={userData} setUserData={setUserData} />
+            </>
+          ) : childselect == 2 ? (
+            <>
+              <Firstchild userData={userData} setUserData={setUserData} />
+              <Secondchild userData={userData} setUserData={setUserData} />
+            </>
+          ) : childselect == 1 ? (
+            <>
+              <Firstchild userData={userData} setUserData={setUserData} />
+            </>
+          ) : null}
         </>
       ) : null}
+
+      <br />
 
       <div>
         <Button

@@ -7,19 +7,25 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function FirstStep() {
-  const { setStep, userData, setUserData, childselect, setChildselect } =
-    useContext(multiStepContext);
+  const {
+    setStep,
+    userData,
+    setUserData,
+    childselect,
+    checkvalues,
+    setCheckvalues,
+    setChildselect,
+  } = useContext(multiStepContext);
 
   const [startDate, setStartDate] = useState(new Date());
 
-  const [checkvalue, setCheckvalue] = useState("");
   const childselected = (e) => {
     setChildselect(e.target.value);
     setUserData({ ...userData, childselect: e.target.value });
   };
 
   const onbox = (e) => {
-    setCheckvalue(e.target.value);
+    setCheckvalues(e.target.value);
     setUserData({ ...userData, checkvalue: e.target.value });
   };
 
@@ -226,7 +232,7 @@ function FirstStep() {
           <span className="checkmark"></span>
         </label>
       </div>
-      {checkvalue === "dango" ? (
+      {checkvalues === "dango" ? (
         <>
           <label>Select number of childrens</label>
           <select

@@ -9,6 +9,7 @@ const StepContext = () => {
   const [userData, setUserData] = useState([]);
   const [finalData, setFinalData] = useState([]);
   const [childselect, setChildselect] = useState("");
+  const [checkvalues, setCheckvalues] = useState("");
 
   function submitData() {
     setFinalData((finalData) => [...finalData, userData]);
@@ -30,6 +31,8 @@ const StepContext = () => {
           submitData,
           childselect,
           setChildselect,
+          checkvalues,
+          setCheckvalues,
         }}
       >
         <App />
